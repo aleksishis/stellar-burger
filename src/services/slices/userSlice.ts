@@ -7,7 +7,7 @@ import {
   logoutApi,
   registerUserApi,
   updateUserApi
-} from '@api';
+} from '../../utils/burger-api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder, TUser } from '../../utils/types';
 import { deleteCookie, setCookie } from '../../utils/cookie';
@@ -103,7 +103,7 @@ const userSlice = createSlice({
     userSelector: (state) => state.user,
 
     userOrdersSelector: (state) => state.orders,
-    ordersRequestSelector: (state) => state.orders,
+    ordersRequestSelector: (state) => state.ordersRequest,
 
     errorSelector: (state) => state.error
   },
